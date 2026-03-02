@@ -478,7 +478,7 @@ if "prediction_result" not in st.session_state:
     st.session_state.prediction_result = None
 
 # ===================== Load Model =====================
-MODEL_PATH = "../model/mnist_model.pkl"
+MODEL_PATH = "model/mnist_model.pkl"
 model = joblib.load(MODEL_PATH)
 
 # ===================== Header Section =====================
