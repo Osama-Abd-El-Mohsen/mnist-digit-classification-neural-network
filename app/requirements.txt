@@ -1,8 +1,7 @@
 streamlit==1.32.0
-protobuf==3.20.3
 numpy
 pandas
 pillow
 scikit-learn
 streamlit-drawable-canvas
-tensorflow
+tensorflow==2.15.0
