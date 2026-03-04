@@ -14,19 +14,7 @@ import streamlit as st
 
 @st.cache_resource
 def load_model():
-    """Load the trained model with caching for performance."""
-    model_paths = [
-        Path(__file__).parent.parent / "model" / "mnist_model.pkl",
-        Path("model/mnist_model.pkl"),
-        Path("../model/mnist_model.pkl"),
-    ]
-    
-    for path in model_paths:
-        if path.exists():
-            return joblib.load(path)
-    
-    st.error("⚠️ Model not found. Please run the training notebook first.")
-    st.stop()
+    return joblib.load("model/mnist_model.pkl")
 
 
 def process_canvas_image(canvas_data: np.ndarray) -> np.ndarray:
