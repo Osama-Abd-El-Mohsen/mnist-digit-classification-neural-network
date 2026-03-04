@@ -1,7 +1,6 @@
-streamlit==1.32.0
+joblib
+scikit-learn
+streamlit
 numpy
 pandas
-pillow
-scikit-learn
 streamlit-drawable-canvas
-tensorflow==2.15.0
