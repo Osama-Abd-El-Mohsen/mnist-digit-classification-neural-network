@@ -1,0 +1,32 @@
+name: Refresh Website
+
+on:
+  schedule:
+    - cron: "0 */10 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  commit:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configure git
+        run: |
+          git config user.name "${{ secrets.MY_Name }}"
+          git config user.email "${{ secrets.MY_EMAIL }}"
+
+      - name: Update file
+        run: |
+          date > refresh.txt
+
+      - name: Commit and push
+        run: |
+          git add refresh.txt
+          git commit -m "Auto refresh $(date)"
+          git push
