@@ -2,3 +2,4 @@
 .venv
 Folder Structure.png
 *.pyc
+logs

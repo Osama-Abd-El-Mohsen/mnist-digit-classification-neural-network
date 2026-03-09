@@ -17,7 +17,7 @@ def get_header() -> str:
             </div>
             <div class="header-stat">
                 <span class="header-stat-label">Accuracy</span>
-                <span class="header-stat-value">99.54%</span>
+                <span class="header-stat-value">99.58%</span>
             </div>
             <div class="header-stat">
                 <span class="header-stat-label">Dataset</span>
